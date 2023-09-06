@@ -9,8 +9,14 @@ const (
 	INT   = "INT"   // 12345
 
 	// 运算符
-	ASSIGN = "="
-	PLUS   = "+"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
+	LT       = "<"
+	GT       = ">"
 
 	// 分隔符
 	COMMA     = ","
