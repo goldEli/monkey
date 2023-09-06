@@ -35,6 +35,10 @@ const (
 	IF       = "IF"
 	ELSE     = "ELSE"
 	RETURN   = "RETURN"
+
+	// 双词
+	EQ     = "=="
+	NOT_EQ = "!="
 )
 
 type TokenType string
