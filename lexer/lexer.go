@@ -1,7 +1,6 @@
 package lexer
 
 import (
-	"fmt"
 	"monkey/token"
 )
 
@@ -40,7 +39,7 @@ func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
 	l.skipWhitespace()
 
-	fmt.Println("ch => ", string(l.ch))
+	// fmt.Println("ch => ", string(l.ch))
 	switch l.ch {
 	case '=':
 		// 处理 "=="
@@ -94,12 +93,12 @@ func (l *Lexer) NextToken() token.Token {
 	default:
 		if isLetter(l.ch) {
 			tok.Literal = l.readIdentifier()
-			fmt.Println("identifier", tok.Literal)
+			// fmt.Println("identifier", tok.Literal)
 			tok.Type = token.LookupIdent(tok.Literal)
 			return tok
 		} else if isDigit(l.ch) {
 			tok.Literal = l.readNumber()
-			fmt.Println("number", tok.Literal)
+			// fmt.Println("number", tok.Literal)
 			tok.Type = token.INT
 			return tok
 		}
